@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { useBudgetMode } from "../context/BudgetContex";
 
 export default function BudgetModePage({ productsList }) {
-  const { budgetModeList, turnBudgetModeOff } = useBudgetMode();
+  const { turnBudgetModeOff } = useBudgetMode();
 
   const productsBudgetMode = productsList.filter((product) =>
-    budgetModeList.includes(product.id)
+   product.price <= 30
   );
 
   return (
@@ -17,7 +17,7 @@ export default function BudgetModePage({ productsList }) {
             <Link to={`/products/${product.id}`}>{product.name}</Link>
             <button
               className="btn"
-              onClick={() => turnBudgetModeOff(product.id)}
+              onClick={() => turnBudgetModeOff}
             >Turn off budget mode
             </button>
           </li>

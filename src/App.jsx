@@ -14,7 +14,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import { BudgetProvider } from "./context/BudgetContex";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import BudgetModePage from "./pages/BudgetMode";
+import BudgetModePage from "./pages/BudgetModePage";
 
 
 

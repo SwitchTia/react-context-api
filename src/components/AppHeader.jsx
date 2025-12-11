@@ -17,7 +17,7 @@ export default function AppHeader() {
             path: "/products",
         },
         {
-            title: "BudgetMode",
+            title: "Budget Mode",
             path: "/personaggi/budget-mode",
         },
     ];

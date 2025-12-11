@@ -7,22 +7,22 @@ const BudgetContext = createContext();
 function BudgetProvider({ children }) {
     const [budgetMode, setBudgetMode] = useState("false");
 
-    function isBudgetMode(id) {
-        return budgetMode.includes(id);
+    function isBudgetModeOn() {
+        return budgetMode.includes();
     }
 
-    function addBudgetMode(id) {
-        setBudgetMode((current) => [...current, id]);
+    function turnBudgetModeOn() {
+        setBudgetMode();
     }
 
-    function deleteBudgetMode(id) {
-        setBudgetMode((current) => current.filter((budgetModeId) => id !== budgetModeId));
+    function turnBudgetModeOff() {
+        setBudgetMode();
     }
 
     const contextValue = {
-        isBudgetMode,
-        addBudgetMode,
-        deleteBudgetMode
+        isBudgetModeOn,
+        turnBudgetModeOn,
+        turnBudgetModeOff
     };
 
 

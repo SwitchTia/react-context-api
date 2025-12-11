@@ -11,26 +11,29 @@ import NotFound from "./pages/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import DefaultLayout from "./layouts/DefaultLayout";
-
+import { BudgetProvider } from "./context/BudgetContex";
 
 
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/products">
-              <Route path="" element={<Products />} />
-              <Route path=":id" element={<SingleProduct />} />
+      <BudgetProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<DefaultLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/products">
+                <Route path="" element={<Products />} />
+                <Route path=":id" element={<SingleProduct />} />
+              </Route>
+              {/* need to add a route for BudgetModeProducts page */}
+              <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </BudgetProvider>
     </>
   );
 }

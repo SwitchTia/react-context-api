@@ -10,11 +10,11 @@ export default function BudgetModePage({ productsList }) {
   );
 
   return (
-    <div className="container">
-      <h1>Budget mode product list:</h1>
-      <ul>
+    <div >
+      <h1 className="text-center py-20">Budget mode product list:</h1>
+      <section className="container flex wrap">
         {productsBudgetMode.map((product) => (
-          <li key={product.id}>
+          <div className="col card" key={product.id}>
             <Link to={`/products/${product.id}`}>
               <ProductCard
                 title={product.title}
@@ -22,15 +22,17 @@ export default function BudgetModePage({ productsList }) {
                 price={product.price}
               />
             </Link>
-
-            <button
+          </div>
+        ))}
+      </section>
+      <div className="flex-center py-40">
+        <button
               className="btn"
               onClick={() => turnBudgetModeOff()}
             >Turn off budget mode
             </button>
-          </li>
-        ))}
-      </ul>
+      </div>
+
     </div>
   );
 }

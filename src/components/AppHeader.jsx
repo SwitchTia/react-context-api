@@ -16,6 +16,10 @@ export default function AppHeader() {
             title: "Products",
             path: "/products",
         },
+        {
+            title: "BudgetMode",
+            path: "/personaggi/budget-mode",
+        },
     ];
 
 
@@ -31,7 +35,7 @@ export default function AppHeader() {
                     </li>
                 ))}
             </ul>
-        
+
         </header>
     );
 }

@@ -12,10 +12,31 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import DefaultLayout from "./layouts/DefaultLayout";
 import { BudgetProvider } from "./context/BudgetContex";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import BudgetModePage from "./pages/BudgetMode";
+
+
 
 
 
 function App() {
+
+
+  const [productsList, setProductsList] = useState([]);
+
+
+    useEffect(() => {
+        fetchAllProducts();
+    }, [])
+
+    function fetchAllProducts() {
+        axios.get("https://fakestoreapi.com/products")
+            .then((resp) => {
+                setProductsList(resp.data);
+            });
+    }
+
   return (
     <>
       <BudgetProvider>
@@ -25,10 +46,14 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/products">
-                <Route path="" element={<Products />} />
+                <Route path="" element={<Products productsList={productsList} />} />
                 <Route path=":id" element={<SingleProduct />} />
               </Route>
-              {/* need to add a route for BudgetModeProducts page */}
+              <Route
+                path="/personaggi/budget-mode"
+                element={<BudgetModePage productsList={productsList} />}
+              />
+              
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

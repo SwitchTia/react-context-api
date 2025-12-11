@@ -20,6 +20,7 @@ function BudgetProvider({ children }) {
     }
 
     const contextValue = {
+        budgetMode,
         isBudgetModeOn,
         turnBudgetModeOn,
         turnBudgetModeOff
@@ -33,4 +34,10 @@ function BudgetProvider({ children }) {
     );
 
 }
-export { BudgetProvider }
+
+
+function useBudgetMode() {
+  const value = useContext(BudgetContext);
+  return value;
+}
+export { BudgetProvider, useBudgetMode }

@@ -6,19 +6,19 @@ import { Link } from "react-router-dom";
 
 export default function Products() {
 
-    const [productsList, setProductsList] = useState([]);
+    // const [productsList, setProductsList] = useState([]);
 
 
-    useEffect(() => {
-        fetchAllProducts();
-    }, [])
+    // useEffect(() => {
+    //     fetchAllProducts();
+    // }, [])
 
-    function fetchAllProducts() {
-        axios.get("https://fakestoreapi.com/products")
-            .then((resp) => {
-                setProductsList(resp.data);
-            });
-    }
+    // function fetchAllProducts() {
+    //     axios.get("https://fakestoreapi.com/products")
+    //         .then((resp) => {
+    //             setProductsList(resp.data);
+    //         });
+    // }
 
     return (
         <>

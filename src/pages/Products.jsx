@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+
 
 import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
 
 
-export default function Products() {
+export default function Products({ productsList}) {
 
     // const [productsList, setProductsList] = useState([]);
 
@@ -48,9 +48,3 @@ export default function Products() {
     )
 }
 
-
-{/* <ProductCard
-                                title={product.title}
-                                image={product.image}
-                                price={product.price}
-                            /> */}

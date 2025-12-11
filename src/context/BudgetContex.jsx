@@ -5,18 +5,18 @@ const BudgetContext = createContext();
 
 
 function BudgetProvider({ children }) {
-    const [budgetMode, setBudgetMode] = useState("false");
+    const [budgetMode, setBudgetMode] = useState(false);
 
     function isBudgetModeOn() {
-        return budgetMode.includes();
+        return budgetMode;
     }
 
     function turnBudgetModeOn() {
-        setBudgetMode();
+        setBudgetMode(true);
     }
 
     function turnBudgetModeOff() {
-        setBudgetMode();
+        setBudgetMode(false);
     }
 
     const contextValue = {

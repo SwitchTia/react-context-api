@@ -5,25 +5,23 @@ const BudgetContext = createContext();
 
 
 function BudgetProvider({ children }) {
-    const [budgetMode, setBudgetMode] = useState(false);
+    const [isBudgetMode, setIsBudgetMode] = useState(false);
 
-    function isBudgetModeOn() {
-        return budgetMode;
+    function toggleBudgetMode() {
+        setIsBudgetMode((current) =>!current);
     }
 
-    function turnBudgetModeOn() {
-        setBudgetMode(true);
-    }
+    // function turnBudgetModeOn() {
+    //     setBudgetMode(true);
+    // }
 
-    function turnBudgetModeOff() {
-        setBudgetMode(false);
-    }
+    // function turnBudgetModeOff() {
+    //     setBudgetMode(false);
+    // }
 
     const contextValue = {
-        budgetMode,
-        isBudgetModeOn,
-        turnBudgetModeOn,
-        turnBudgetModeOff
+        isBudgetMode,
+        toggleBudgetMode,
     };
 
 

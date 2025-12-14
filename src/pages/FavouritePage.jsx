@@ -35,9 +35,9 @@ export default function FavouritePage({ productList }) {
 
               <div className="flex py-20">
                 <button
-                  className="btn "
+                  className="btn py-10 "
                   onClick={() => removeFavourite(product.id)}
-                >Remove from favourites
+                >Remove favourite
                 </button>
               </div>
 

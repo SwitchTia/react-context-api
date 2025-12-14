@@ -6,16 +6,16 @@ export default function BudgetModePage({ productsList }) {
 
   const { turnBudgetModeOff } = useBudgetMode();
   const navigate = useNavigate();
-  
+
   const productsBudgetMode = productsList.filter((product) =>
     product.price <= 30
   );
-  
+
   const handleTurnOff = () => {
-    turnBudgetModeOff();  
+    turnBudgetModeOff();
     navigate("/products");
   };
-  
+
   return (
     <>
       <div>
@@ -26,7 +26,7 @@ export default function BudgetModePage({ productsList }) {
         <section className="container flex wrap">
           {productsBudgetMode.map((product) => (
             <div className="col card" key={product.id}>
-              
+
               <Link to={`/products/${product.id}`}>
                 <ProductCard
                   id={product.id}
@@ -36,12 +36,12 @@ export default function BudgetModePage({ productsList }) {
                   rating={product.rating}
                 />
               </Link>
-              
+
             </div>
           ))}
         </section>
 
-        <div className="flex-center py-40">
+        <div className="flex py-40">
           <button
             className="btn"
             onClick={handleTurnOff}

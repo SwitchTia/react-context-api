@@ -77,7 +77,7 @@ main {
 }
 
 .bg-on {
-  background-color:  rgb(86, 105, 181);
+  background-color: rgb(100, 93, 155);;
 }
 
 .bg-off {
@@ -133,8 +133,8 @@ header li {
 }
 
 .btn {
-  background-color:  rgb(86, 105, 181);
-  border: rgb(32, 123, 243);
+  background-color:  rgb(100, 93, 155);
+  border:rgb(100, 93, 155);
   text-transform: uppercase;
   color: white;
   padding: 10px ;
@@ -143,7 +143,7 @@ header li {
 }
 
 .btnBudgetMode {
-  border: rgb(32, 123, 243);
+  border: rgb(100, 93, 155);
   text-transform: uppercase;
   color: white;
   padding: 10px ;

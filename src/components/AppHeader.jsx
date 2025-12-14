@@ -20,10 +20,10 @@ export default function AppHeader() {
             title: "Products",
             path: "/products",
         },
-        // {
-        //     title: "Budget Mode",
-        //     path: "/personaggi/budget-mode",
-        // },
+        {
+            title: "Favourite Items",
+            path: "products/favourite-items",
+        },
     ];
 
 

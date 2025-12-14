@@ -1,14 +1,14 @@
-import {  useContext, createContext, useState } from "react";
+import { useContext, createContext, useState } from "react";
 
 
 const BudgetContext = createContext();
 
-
+//Provider
 function BudgetProvider({ children }) {
     const [isBudgetMode, setIsBudgetMode] = useState(false);
 
     function toggleBudgetMode() {
-        setIsBudgetMode((current) =>!current);
+        setIsBudgetMode((current) => !current);
     }
 
     function turnBudgetModeOff() {
@@ -21,7 +21,7 @@ function BudgetProvider({ children }) {
         turnBudgetModeOff,
     };
 
-
+    //Consumer:
     return (
         <BudgetContext.Provider value={contextValue}>
             {children}
@@ -32,8 +32,8 @@ function BudgetProvider({ children }) {
 
 
 function useBudgetMode() {
-  const value = useContext(BudgetContext);
-  return value;
+    const value = useContext(BudgetContext);
+    return value;
 }
 
 export { BudgetProvider, useBudgetMode }

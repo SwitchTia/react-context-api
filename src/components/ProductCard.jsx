@@ -1,6 +1,8 @@
 import HeartRed from "../assets/icons/HeartRed";
 import HeartEmpty from "../assets/icons/HeartEmpty";
+import StarEmpty from "../assets/icons/StarEmpty";
 import { useState } from "react";
+import StarFull from "../assets/icons/StarFull";
 
 
 export default function ProductCard({ title, price, image }) {
@@ -22,7 +24,7 @@ export default function ProductCard({ title, price, image }) {
         <section>
             <div className="flex-between">
                 <div>
-                    stars here
+                   {StarFull} 
                 </div>
                 <div className="" onClick={handleFavoriteToggle}>
                     {isFavorite ? (

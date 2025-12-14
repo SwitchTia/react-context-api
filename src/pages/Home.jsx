@@ -17,10 +17,10 @@ export default function Home() {
                     </div>
 
                     <div>
-                        <h3 >
+                        <h2 >
                             Your trusted online destination for quality products and a seamless shopping experience.
                             Founded with a simple mission — to make online shopping easier, faster, and more enjoyable — ShopWithUs brings together a curated selection of items from trusted brands and emerging creators around the world.
-                        </h3>
+                        </h2>
                    
                     </div>
 
@@ -28,7 +28,7 @@ export default function Home() {
 
 
                 <div className="py-40">
-                    <h4 className="py-40">What We Offer:</h4>
+                    <h3 className="py-40">What We Offer:</h3>
                     <hr />
                     <p className="py-20">At ShopWithUS, we handpick every item to ensure our customers get a curated selection of:</p>
                     <div className="py-20">
@@ -41,7 +41,7 @@ export default function Home() {
                         </ul>
                     </div>
                 </div>
-                
+
             </div >
 
         </>

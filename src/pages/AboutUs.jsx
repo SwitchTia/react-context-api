@@ -8,9 +8,9 @@ export default function AboutUs() {
                 <h1 className="text-center mb-30">About us</h1>
                 <hr />
 
-                <h3 className="py-40">
+                <h2 className="py-40">
                     At ShopWithUs, we believe shopping is more than just a transaction – it's an experience. We're dedicated to making every step memorable by focusing on:
-                </h3>
+                </h2>
 
                 <hr />
 
@@ -38,13 +38,13 @@ export default function AboutUs() {
 
                 <hr />
 
-                <p className="py-40">
+                <h4 className="py-40">
                     We’re more than a store — we’re a community of shoppers who value convenience, style, and smart choices.
 
                     Whether you’re looking for the latest trends, everyday essentials, or unique items you won’t find elsewhere, NovaCart is here to help you discover it all.
 
                     Thank you for choosing ShopWithUs — where quality meets convenience.
-                </p>
+                </h4>
             </div>
         </>
     );

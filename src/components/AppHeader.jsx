@@ -33,7 +33,7 @@ export default function AppHeader() {
         if (isBudgetMode) {
             // If mode is ON, turn it ooff and go Home
             turnBudgetModeOff();
-            navigate("/");
+            navigate("/products");
         } else {
             // If mode is OFF, turn it on and go to the Budget page
             toggleBudgetMode();

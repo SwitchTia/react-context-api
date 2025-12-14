@@ -139,6 +139,12 @@ header li {
   height: 40px;
 }
 
+.aboutImg{
+  height: 300px;
+  width: 400px;
+  margin-top: 30px;
+}
+
 /* responsive mobile first */
 /* tablet */
 @media (min-width: 768px) {

@@ -9,10 +9,6 @@ export default function Products({ productsList}) {
 
     return (
         <>
-           
-                <div className="text-center py-20">
-                    <h1>See our products:</h1>
-                </div>
                 <div className="container flex wrap">
                     {productsList.map((product) => (
                         <div className="col card" key={product.id}>

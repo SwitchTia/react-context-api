@@ -1,13 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useBudgetMode } from "../context/BudgetContex";
 import ProductCard from "../components/ProductCard";
 
 export default function BudgetModePage({ productsList }) {
   const { turnBudgetModeOff } = useBudgetMode();
 
+  const navigate = useNavigate();
+
   const productsBudgetMode = productsList.filter((product) =>
     product.price <= 30
   );
+
+  const handleTurnOff = () => {
+    turnBudgetModeOff;
+    navigate("/products")
+  }
 
   return (
     <div >
@@ -28,7 +35,7 @@ export default function BudgetModePage({ productsList }) {
       <div className="flex-center py-40">
         <button
               className="btn"
-              onClick={() => turnBudgetModeOff()}
+              onClick={handleTurnOff}
             >Turn off budget mode
             </button>
       </div>

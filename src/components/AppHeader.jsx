@@ -56,9 +56,9 @@ export default function AppHeader() {
             </div>
 
 
-            <button className={`btn ${isBudgetMode ? "bg-on" : "bg-off"} `} 
+            <button className={`btn ${isBudgetMode ? "bg-off" : "bg-on"} `} 
                 onClick={handleBudgetModeClick}>
-                {isBudgetMode ? "Turn on Budget Mode" : "Turn off Budget Mode"}
+                {isBudgetMode ? "Turn off Budget Mode" : "Turn on Budget Mode"}
             </button>
 
 

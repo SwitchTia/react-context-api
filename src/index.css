@@ -108,11 +108,7 @@ main {
   align-items: center;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .card-img {
   max-width: 130px;
@@ -137,6 +133,16 @@ header li {
 }
 
 .btn {
+  background-color:  rgb(86, 105, 181);
+  border: rgb(32, 123, 243);
+  text-transform: uppercase;
+  color: white;
+  padding: 10px ;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.btnBudgetMode {
   border: rgb(32, 123, 243);
   text-transform: uppercase;
   color: white;

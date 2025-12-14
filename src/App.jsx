@@ -29,24 +29,18 @@ function App() {
 
   return (
     <BudgetProvider>
-      <FavouriteProvider>
+      <FavouriteProvider> 
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
               <Route path="/" element={<HomePage />} />
-              <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/products">
                 <Route path="" element={<ProductsPage productsList={productsList} />} />
                 <Route path=":id" element={<SingleProductPage />} />
               </Route>
-              <Route
-                path="/budget-mode"
-                element={<BudgetModePage productsList={productsList} />}
-              />
-              <Route 
-                path="/favourites" 
-                element={<FavouritePage productList={productsList} />} 
-              />
+              <Route path="/budget-mode" element={<BudgetModePage productsList={productsList} />} />
+              <Route path="/favourites" element={<FavouritePage productList={productsList} />} />
+              <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>

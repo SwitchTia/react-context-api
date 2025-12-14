@@ -22,7 +22,7 @@ export default function AppHeader() {
         },
         {
             title: "Favourite Items",
-            path: "products/favourite-items",
+            path: "/favourites",
         },
     ];
 
@@ -46,7 +46,7 @@ export default function AppHeader() {
             <div className="flex gap">
                 <img className="logo-img" src={LogoImg} alt="logo" />
 
-                <ul className="flex-center">
+                <ul className="flex">
                     {navLinks.map((link, index) => (
                         <li className="gap" key={index}>
                             <NavLink to={link.path}>{link.title}</NavLink>
@@ -56,7 +56,7 @@ export default function AppHeader() {
             </div>
 
 
-            <button className={`btn ${isBudgetMode ? "bg-off" : "bg-on"} `} 
+            <button className={`btnBudgetMode ${isBudgetMode ? "bg-off" : "bg-on"} `} 
                 onClick={handleBudgetModeClick}>
                 {isBudgetMode ? "Turn off Budget Mode" : "Turn on Budget Mode"}
             </button>

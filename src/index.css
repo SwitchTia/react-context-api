@@ -27,7 +27,7 @@ main {
 .container {
   width: 90%;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: rgb(203, 198, 246);
   padding: 30px;
 
@@ -121,6 +121,7 @@ header li {
 .logo-img {
   width: 70px;
   margin-right: 20px;
+  border-radius: 5px;
 }
 
 .home-img {

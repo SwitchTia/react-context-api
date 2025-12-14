@@ -9,7 +9,7 @@ export default function Products({ productsList}) {
 
     return (
         <>
-            <main>
+           
                 <div className="text-center py-20">
                     <h1>See our products:</h1>
                 </div>
@@ -30,7 +30,7 @@ export default function Products({ productsList}) {
                         </div>
                     ))}
                 </div>
-            </main>
+        
         </>
     )
 }

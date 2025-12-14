@@ -18,7 +18,7 @@ export default function BudgetModePage({ productsList }) {
 
   return (
     <div >
-      <h2 className="text-center py-20 burgundy">Want to spend less? Here is are our BudgetMode products:</h2>
+      <h2 className="text-center py-20 burgundy">Want to spend less? Here are our BudgetMode products:</h2>
       <section className="container flex wrap">
         {productsBudgetMode.map((product) => (
           <div className="col card" key={product.id}>

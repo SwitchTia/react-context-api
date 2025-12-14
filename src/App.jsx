@@ -50,7 +50,7 @@ function App() {
                 <Route path=":id" element={<SingleProduct />} />
               </Route>
               <Route
-                path="/personaggi/budget-mode"
+                path="/budget-mode"
                 element={<BudgetModePage productsList={productsList} />}
               />
               

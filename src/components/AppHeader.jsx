@@ -20,10 +20,10 @@ export default function AppHeader() {
             title: "Products",
             path: "/products",
         },
-        {
-            title: "Budget Mode",
-            path: "/personaggi/budget-mode",
-        },
+        // {
+        //     title: "Budget Mode",
+        //     path: "/personaggi/budget-mode",
+        // },
     ];
 
 
@@ -37,7 +37,7 @@ export default function AppHeader() {
         } else {
             // If mode is OFF, turn it on and go to the Budget page
             toggleBudgetMode();
-            navigate("/personaggi/budget-mode");
+            navigate("/budget-mode");
         }
     };
 

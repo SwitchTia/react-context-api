@@ -5,16 +5,16 @@ import { useState } from "react";
 import StarFull from "../assets/icons/StarFull";
 
 
-export default function ProductCard({ title, price, image }) {
+export default function ProductCard({id, title, price, image }) {
 
-    const [isFavorite, setIsFavorite] = useState(false);
+    const [isFavorite, setIsFavorite, addFavourite] = useState(false);
 
     const handleFavoriteToggle = (e) => {
         e.preventDefault();
 
         setIsFavorite(current => !current);
 
-        // addToFavorites(productId); 
+        // addFavourite(id); 
     };
 
 
@@ -24,7 +24,8 @@ export default function ProductCard({ title, price, image }) {
         <section>
             <div className="flex-between">
                 <div>
-                   {StarFull} 
+                   <StarFull/>
+                   <StarEmpty/>
                 </div>
                 <div className="" onClick={handleFavoriteToggle}>
                     {isFavorite ? (

@@ -1,5 +1,5 @@
 export default function StarFull(props) {
-  const PASTEL_YELLOW = "#101010ff"; 
+  const PASTEL_YELLOW = "#964156ff";
   
   return (
     <svg 

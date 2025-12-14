@@ -1,5 +1,5 @@
 export default function HeartEmpty(props) {
-  const BURGUNDY = "#800020"; 
+  const BURGUNDY = "#964156ff";
   
   return (
     <svg 

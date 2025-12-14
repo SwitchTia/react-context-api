@@ -1,6 +1,6 @@
 export default function StarEmpty(props) {
 
-  const PASTEL_YELLOW = "#efa754ff"; 
+  const PASTEL_YELLOW = "#964156ff";
   
   return (
     <svg 

@@ -1,5 +1,5 @@
 export default function HeartRed(props) {
-  const BURGUNDY = "#800020"; 
+  const BURGUNDY = "#ae425dff"; 
   
   return (
     <svg 

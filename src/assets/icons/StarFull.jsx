@@ -1,13 +1,14 @@
 export default function StarFull(props) {
-  const PASTEL_YELLOW = "#964156ff";
+  const color = "#964156ff";
   
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      width="20" height="20" 
+      width="15" 
+      height="15" 
       viewBox="0 0 24 24" 
-      fill={PASTEL_YELLOW} // Solid fill color is Pastel Yellow
-      stroke={PASTEL_YELLOW} // Stroke color is also Pastel Yellow
+      fill={color} 
+      stroke={color} 
       strokeWidth="2" 
       strokeLinecap="round" 
       strokeLinejoin="round" 

@@ -1,4 +1,4 @@
-import HeartRed from "../assets/icons/HeartRed";
+import HeartFull from "../assets/icons/HeartFull";
 import HeartEmpty from "../assets/icons/HeartEmpty";
 import StarEmpty from "../assets/icons/StarEmpty";
 import { useState } from "react";
@@ -29,7 +29,7 @@ export default function ProductCard({id, title, price, image }) {
                 </div>
                 <div className="" onClick={handleFavoriteToggle}>
                     {isFavorite ? (
-                        <HeartRed className="favorite-icon" />
+                        <HeartFull className="favorite-icon" />
                     ) : (
                         <HeartEmpty className="favorite-icon" />
                     )}

@@ -1,14 +1,14 @@
 export default function HeartEmpty(props) {
-  const BURGUNDY = "#964156ff";
+  const color = "#964156ff";
   
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      width="20" // Explicitly setting a small width
-      height="20" // Explicitly setting a small height
+      width="15"
+      height="15" 
       viewBox="0 0 24 24" 
       fill="none" 
-      stroke={BURGUNDY} // Outline color
+      stroke={color} 
       strokeWidth="2" 
       strokeLinecap="round" 
       strokeLinejoin="round" 

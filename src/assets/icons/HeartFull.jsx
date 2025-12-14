@@ -1,15 +1,15 @@
-export default function HeartRed(props) {
-  const BURGUNDY = "#964156ff"; 
+export default function HeartFull(props) {
+  const color = "#964156ff"; 
   
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      width="20" // Explicitly setting a small width
-      height="20" // Explicitly setting a small height
+      width="15" 
+      height="15" 
       viewBox="0 0 24 24" 
-      fill={BURGUNDY} // Solid Fill color
-      stroke={BURGUNDY} // Stroke color
-      strokeWidth="1.5" // Slightly thinner stroke looks better when filled
+      fill={color} 
+      stroke={color} 
+      strokeWidth="1.5" 
       strokeLinecap="round" 
       strokeLinejoin="round" 
       {...props}

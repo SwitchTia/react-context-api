@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  text-decoration: none;
 }
 
 img {
@@ -68,6 +68,17 @@ main {
   padding-bottom: 10px;
 }
 
+.bg-on {
+  background-color:  rgb(86, 105, 181);
+}
+
+.bg-off {
+  background-color:  rgb(181, 86, 130);
+}
+
+
+
+
 .flex {
   display: flex;
 }
@@ -113,12 +124,12 @@ header li {
 }
 
 .btn {
-  background-color: rgb(86, 105, 181);
   border: rgb(32, 123, 243);
   text-transform: uppercase;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px ;
+  border-radius: 10px;
+  height: 40px;
 }
 
 /* responsive mobile first */

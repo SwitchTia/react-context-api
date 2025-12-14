@@ -4,7 +4,7 @@ import { useBudgetMode } from "../context/BudgetContex";
 
 
 export default function AppHeader() {
-    
+
     const navLinks = [
         {
             title: "Home",
@@ -23,27 +23,30 @@ export default function AppHeader() {
             path: "/personaggi/budget-mode",
         },
     ];
-    
+
 
     const { toggleBudgetMode, isBudgetMode } = useBudgetMode();
 
     return (
-        <header className="flex gap">
-            <div>
+        <header className="flex-between">
+            <div className="flex gap">
                 <img className="logo-img" src={Logo} alt="logo" />
-            </div>
-            <ul className="flex-center">
-                {navLinks.map((link, index) => (
-                    <li className="gap" key={index}>
-                        <NavLink to={link.path}>{link.title}</NavLink>
-                    </li>
-                ))}
-            </ul>
 
-            <button className="btn" onClick={toggleBudgetMode}>
+                <ul className="flex-center">
+                    {navLinks.map((link, index) => (
+                        <li className="gap" key={index}>
+                            <NavLink to={link.path}>{link.title}</NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+
+            <button className={`btn ${isBudgetMode ? "bg-on" : "bg-off"} `} onClick={toggleBudgetMode}>
                 {isBudgetMode ? "Turn on Budget Mode" : "Turn off Budget Mode"}
             </button>
 
-        </header>
+
+        </header >
     );
 }

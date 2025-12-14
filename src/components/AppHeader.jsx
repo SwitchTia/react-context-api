@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import Logo from "../assets/img/Logo.png"
+import LogoImg from "../assets/img/LogoImg.png"
 import { useBudgetMode } from "../context/BudgetContex";
 
 
@@ -44,7 +44,7 @@ export default function AppHeader() {
     return (
         <header className="flex-between">
             <div className="flex gap">
-                <img className="logo-img" src={Logo} alt="logo" />
+                <img className="logo-img" src={LogoImg} alt="logo" />
 
                 <ul className="flex-center">
                     {navLinks.map((link, index) => (

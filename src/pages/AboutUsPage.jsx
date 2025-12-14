@@ -1,7 +1,7 @@
 import AppHeader from "../components/AppHeader";
-import About from "../assets/img/About.png"
+import AboutImg from "../assets/img/AboutImg.png"
 
-export default function AboutUs() {
+export default function AboutUsPage() {
     return (
         <>
             <div className="container">
@@ -32,7 +32,7 @@ export default function AboutUs() {
                             <li className="mb-30"> A Growing Community</li>
                         </ul>
                     </div>
-                    <img className="aboutImg" src={About} alt="" />
+                    <img className="aboutImg" src={AboutImg} alt="" />
                 </div>
 
 

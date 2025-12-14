@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useState } from "react";
 
 const FavouriteContext = createContext();
@@ -12,7 +11,9 @@ function FavouriteProvider({ children }) {
   }
 
   function addFavourite(id) {
-    setFavouriteItemsList((current) => [...current, id]);
+    if (!favouriteItemsList.includes(id)) {
+      setFavouriteItemsList((current) => [...current, id]);
+    }
   }
 
   function removeFavourite(id) {
@@ -36,6 +37,11 @@ function FavouriteProvider({ children }) {
 //Consumer:
 function useFavourite() {
   const value = useContext(FavouriteContext);
+  
+  if (!value) {
+    throw new Error("useFavourite must be used within a FavouriteProvider");
+  }
+  
   return value;
 }
 

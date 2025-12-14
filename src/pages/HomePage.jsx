@@ -1,7 +1,7 @@
-
 import HomeImg from "../assets/img/HomeImg.png"
 
-export default function Home() {
+
+export default function HomePage() {
     return (
         <>
             <div className="container">

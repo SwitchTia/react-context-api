@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/img/Logo.png"
+import { useBudgetMode } from "../context/BudgetContex";
 
 
 export default function AppHeader() {
@@ -22,7 +23,9 @@ export default function AppHeader() {
             path: "/personaggi/budget-mode",
         },
     ];
+    
 
+    const { toggleBudgetMode, isBudgetMode } = useBudgetMode();
 
     return (
         <header className="flex gap">
@@ -36,6 +39,10 @@ export default function AppHeader() {
                     </li>
                 ))}
             </ul>
+
+            <button className="btn" onClick={toggleBudgetMode}>
+                {isBudgetMode ? "Turn on Budget Mode" : "Turn off Budget Mode"}
+            </button>
 
         </header>
     );

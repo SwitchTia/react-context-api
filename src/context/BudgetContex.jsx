@@ -11,9 +11,14 @@ function BudgetProvider({ children }) {
         setIsBudgetMode((current) =>!current);
     }
 
+    function turnBudgetModeOff() {
+        setIsBudgetMode(false);
+    }
+
     const contextValue = {
         isBudgetMode,
         toggleBudgetMode,
+        turnBudgetModeOff,
     };
 
 

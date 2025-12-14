@@ -1,9 +1,11 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "../assets/img/Logo.png"
 import { useBudgetMode } from "../context/BudgetContex";
 
 
 export default function AppHeader() {
+
+    const navigate = useNavigate();
 
     const navLinks = [
         {
@@ -25,7 +27,19 @@ export default function AppHeader() {
     ];
 
 
-    const { toggleBudgetMode, isBudgetMode } = useBudgetMode();
+    const { toggleBudgetMode, isBudgetMode, turnBudgetModeOff } = useBudgetMode();
+
+    const handleBudgetModeClick = () => {
+        if (isBudgetMode) {
+            // If mode is ON, turn it ooff and go Home
+            turnBudgetModeOff();
+            navigate("/");
+        } else {
+            // If mode is OFF, turn it on and go to the Budget page
+            toggleBudgetMode();
+            navigate("/personaggi/budget-mode");
+        }
+    };
 
     return (
         <header className="flex-between">
@@ -42,7 +56,8 @@ export default function AppHeader() {
             </div>
 
 
-            <button className={`btn ${isBudgetMode ? "bg-on" : "bg-off"} `} onClick={toggleBudgetMode}>
+            <button className={`btn ${isBudgetMode ? "bg-on" : "bg-off"} `} 
+                onClick={handleBudgetModeClick}>
                 {isBudgetMode ? "Turn on Budget Mode" : "Turn off Budget Mode"}
             </button>
 

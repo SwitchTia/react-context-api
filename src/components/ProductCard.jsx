@@ -1,5 +1,5 @@
-import HeartEmpty from "../assets/img/icons/HeartEmpty";
-import HeartRed from "../assets/img/icons/HeartRed";
+import HeartRed from "../assets/icons/HeartRed";
+import HeartEmpty from "../assets/icons/HeartEmpty";
 import { useState } from "react";
 
 
@@ -33,12 +33,14 @@ export default function ProductCard({ title, price, image }) {
                 </div>
             </div>
 
-            <div className="align-end">
+            <div className="text-center">
                 <img className="card-img" src={image} alt={title} />
 
-                <h5 className="py-10">{title}</h5>
+                <h5 className="py-40">{title}</h5>
 
-                <span>Price: {price}</span>
+                <div>
+                    <span >Price: {price}</span>
+                </div>
             </div>
         </section >
 

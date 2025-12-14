@@ -4,11 +4,12 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Cabin', sans-serif;
+  color: rgb(70, 63, 108);
   
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 header {
@@ -37,15 +38,24 @@ main {
   text-align: center;
 }
 
+.text-start {
+  text-align: start;
+}
+
 .card {
   background-color: rgb(227, 227, 240);
   border-radius: 10px;
+ 
 }
 
 .col {
   width: calc(100% / 2 - (10px * 1) / 2);
   padding: 10px;
 }
+
+
+
+
 
 .mb-30 {
   margin-bottom: 30px;
@@ -82,10 +92,13 @@ main {
 
 .flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrap {
   flex-wrap: wrap;
+  align-items: stretch;
   gap: 10px;
 }
 
@@ -102,19 +115,16 @@ main {
 }
 
 .card-img {
-  max-width: 100px;
+  max-width: 130px;
 }
 
-.align-end{
-  display: flex;
-  flex-direction: column;
- 
-}
 
 .gap {
   gap: 10px;
   padding-right: 20px;
 }
+
+
 
 header li {
   list-style: none;
@@ -124,10 +134,6 @@ header li {
   width: 70px;
   margin-right: 20px;
   border-radius: 5px;
-}
-
-.home-img {
-  max-width: 250px;
 }
 
 .btn {
@@ -144,6 +150,15 @@ header li {
   width: 400px;
   margin-top: 30px;
 }
+
+.homeImg{
+  height: 400px;
+  width: 400px;
+  padding-right: 30px;
+  
+}
+
+
 
 /* responsive mobile first */
 /* tablet */

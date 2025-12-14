@@ -5,12 +5,12 @@ export default function AboutUs() {
     return (
         <>
             <div className="container">
-                <h1>About us</h1>
+                <h1 className="text-center mb-30">About us</h1>
                 <hr />
 
-                <p className="py-40">
+                <h3 className="py-40">
                     At ShopWithUs, we believe shopping is more than just a transaction – it's an experience. We're dedicated to making every step memorable by focusing on:
-                </p>
+                </h3>
 
                 <hr />
 

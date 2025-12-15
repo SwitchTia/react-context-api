@@ -23,6 +23,7 @@ export default function ProductCard({ id, title, price, image, rating }) {
 
   const ratingValue = rating.rate;
   const ratingCount = rating.count;
+
   const roundedRating = Math.round(ratingValue);
   const totalStars = 5;
 
@@ -55,8 +56,10 @@ export default function ProductCard({ id, title, price, image, rating }) {
       <div className="text-center">
         <img className="card-img" src={image} alt={title} />
         <h5 className="py-40">{title}</h5>
-        <div>
-          <span>Price: ${price}</span>
+
+        <div className="flex-between">
+          <h5>Price: ${price}</h5>
+          <button className="addToCartBtn"> Add to cart</button>
         </div>
       </div>
     </section>

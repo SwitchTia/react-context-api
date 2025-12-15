@@ -105,7 +105,7 @@ main {
 .flex-between {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:center
 }
 
 
@@ -149,6 +149,16 @@ header li {
   padding: 10px ;
   border-radius: 10px;
   height: 40px;
+}
+
+.addToCartBtn {
+  background-color: #964156;
+  border:rgb(100, 93, 155);
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 25px;
+  color: white;
 }
 
 .aboutImg{

@@ -25,8 +25,8 @@ export default function AppHeader() {
             path: "/favourites",
         },
         {
-            title: "Shopping Card",
-            path: "/shopping-card",
+            title: "Shopping Cart",
+            path: "/shopping-cart",
         },
     ];
 

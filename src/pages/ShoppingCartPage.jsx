@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './ShoppingCardPage.css';
+import './ShoppingCartPage.css';
 
-const ShoppingCardPage = () => {
+const ShoppingCartPage = () => {
   const [budgetMode, setBudgetMode] = useState(false);
 
   const toggleBudgetMode = () => {
@@ -47,4 +47,4 @@ const ShoppingCardPage = () => {
   );
 };
 
-export default ShoppingCardPage;
+export default ShoppingCartPage;

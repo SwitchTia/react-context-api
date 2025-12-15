@@ -1,50 +1,44 @@
-import { useState } from 'react';
-import './ShoppingCartPage.css';
+import { Link } from "react-router-dom";
+import { useFavourite } from "../context/FavouriteContext";
+import ProductCard from "../components/ProductCard";
 
-const ShoppingCartPage = () => {
-  const [budgetMode, setBudgetMode] = useState(false);
 
-  const toggleBudgetMode = () => {
-    setBudgetMode(!budgetMode);
-  };
+export default function ShoppingCartPage({ productList }) {
+  const { shoppingCartList} = useState();
+
+
+  const shoppingCartItems = productList.filter((product) =>
+    shoppingCartList.includes(product.id)
+  );
+
+
 
   return (
-    <div>
-      <header>
-        <div className="flex-between">
-          <div className="flex gap">
-            <img 
-              src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=200&h=200&fit=crop" 
-              alt="Logo" 
-              className="logo-img" 
-            />
-            <ul>
-              <li><h1>Shopping Cart</h1></li>
-            </ul>
-          </div>
-          <button 
-            className={`btnBudgetMode ${budgetMode ? 'bg-on' : 'bg-off'}`}
-            onClick={toggleBudgetMode}
-          >
-            {budgetMode ? 'Budget Mode On' : 'Budget Mode Off'}
-          </button>
-        </div>
-      </header>
+    <>
+      <div>
+        <h2 className="text-center py-20">Your favorite products:</h2>
 
-      <main>
-        <div className="container">
-          <div className="text-center mb-30">
-            <h2 className="py-20">Your Shopping Cart</h2>
-          </div>
+        <section className="container flex wrap">
 
-          <div className="text-center py-40">
-            <p className="burgundy py-20">Your cart is empty</p>
-            <button className="btn">Continue Shopping</button>
-          </div>
-        </div>
-      </main>
-    </div>
+          {shoppingCartItems.map((product) => (
+            <div className="col card  " key={product.id}>
+
+              <Link to={`/products/${product.id}`}>
+                <ProductCard
+                  id={product.id}
+                  title={product.title}
+                  image={product.image}
+                  price={product.price}
+                  rating={product.rating}
+                />
+              </Link>
+
+
+            </div>
+          ))}
+
+        </section>
+      </div>
+    </>
   );
-};
-
-export default ShoppingCartPage;
+}

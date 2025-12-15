@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { useFavourite } from "../context/FavouriteContext";
+import { useShoppingCart } from "../context/ShoppingCartContext"; 
 import ProductCard from "../components/ProductCard";
 
 
-export default function ShoppingCartPage({ productList }) {
-  const { shoppingCartList} = useState();
+export default function ShoppingCartPage({ productsList }) {
+  const { shoppingCartList, removeShoppingCart} = useShoppingCart();
 
 
-  const shoppingCartItems = productList.filter((product) =>
+  const shoppingCartProducts = productsList.filter((product) =>
     shoppingCartList.includes(product.id)
   );
 
@@ -16,11 +16,11 @@ export default function ShoppingCartPage({ productList }) {
   return (
     <>
       <div>
-        <h2 className="text-center py-20">Your favorite products:</h2>
+        <h2 className="text-center py-20">Your shopping cart:</h2>
 
         <section className="container flex wrap">
 
-          {shoppingCartItems.map((product) => (
+          {shoppingCartProducts.map((product) => (
             <div className="col card  " key={product.id}>
 
               <Link to={`/products/${product.id}`}>
@@ -32,6 +32,14 @@ export default function ShoppingCartPage({ productList }) {
                   rating={product.rating}
                 />
               </Link>
+
+              <div className="flex py-20">
+                <button
+                  className="btn py-10 "
+                  onClick={() => removeShoppingCart(product.id)}
+                >Remove from cart
+                </button>
+              </div>
 
 
             </div>

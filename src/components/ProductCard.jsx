@@ -4,10 +4,12 @@ import StarEmpty from "../assets/icons/StarEmpty";
 import StarFull from "../assets/icons/StarFull";
 
 import { useFavourite } from "../context/FavouriteContext";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 
 
 export default function ProductCard({ id, title, price, image, rating }) {
+
 
   const { isFavourite, addFavourite, removeFavourite } = useFavourite();
   const isFav = isFavourite(id);
@@ -21,15 +23,27 @@ export default function ProductCard({ id, title, price, image, rating }) {
     }
   };
 
+
+  const { isShoppingCart, addShoppingCart, removeShoppingCart } = useShoppingCart();
+  const isInCart = isShoppingCart(id);
+
+  const handleAddToCartToggle = (event) => {
+    event.preventDefault();
+    if (isInCart) {
+      removeShoppingCart(id);
+    } else {
+      addShoppingCart(id);
+    }
+  };
+
+
   const ratingValue = rating.rate;
   const ratingCount = rating.count;
 
   const roundedRating = Math.round(ratingValue);
   const totalStars = 5;
 
-  
   const stars = [];
-
 
   for (let i = 0; i < totalStars; i++) {
     if (i < roundedRating) {
@@ -59,7 +73,7 @@ export default function ProductCard({ id, title, price, image, rating }) {
       <div className="mb-30"> 
         <span>out of {ratingCount} reviews</span>
       </div>
-      
+
       <div className="text-center">
         <img className="card-img" src={image} alt={title} />
         <h5 className="py-40">{title}</h5>
@@ -68,7 +82,7 @@ export default function ProductCard({ id, title, price, image, rating }) {
           <h4>Price: ${price}</h4>
 
           <button className="addToCartBtn" 
-              // onClick={handleAddToCartToggle}
+               onClick={handleAddToCartToggle}
               > Add to cart
           </button>
         </div>

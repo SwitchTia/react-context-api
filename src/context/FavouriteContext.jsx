@@ -38,10 +38,6 @@ function FavouriteProvider({ children }) {
 function useFavourite() {
   const value = useContext(FavouriteContext);
   
-  if (!value) {
-    throw new Error("useFavourite must be used within a FavouriteProvider");
-  }
-  
   return value;
 }
 

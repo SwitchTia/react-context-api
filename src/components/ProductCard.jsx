@@ -41,11 +41,13 @@ export default function ProductCard({ id, title, price, image, rating }) {
 
   return (
     <section>
-      <div className="flex-between mb-30">
+      <div className="flex-between">
+
         <div>
-          {stars} from {ratingCount}
+          {stars}
         </div>
-        <div className="" onClick={handleFavoriteToggle}>
+
+        <div  onClick={handleFavoriteToggle}>
           {isFav ? (
             <HeartFull />
           ) : (
@@ -53,13 +55,22 @@ export default function ProductCard({ id, title, price, image, rating }) {
           )}
         </div>
       </div>
+
+      <div className="mb-30"> 
+        <span>out of {ratingCount} reviews</span>
+      </div>
+      
       <div className="text-center">
         <img className="card-img" src={image} alt={title} />
         <h5 className="py-40">{title}</h5>
 
         <div className="flex-between">
-          <h5>Price: ${price}</h5>
-          <button className="addToCartBtn"> Add to cart</button>
+          <h4>Price: ${price}</h4>
+
+          <button className="addToCartBtn" 
+              // onClick={handleAddToCartToggle}
+              > Add to cart
+          </button>
         </div>
       </div>
     </section>

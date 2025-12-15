@@ -24,7 +24,10 @@ export default function AppHeader() {
             title: "Favourite Items",
             path: "/favourites",
         },
-        
+        {
+            title: "Shopping Card",
+            path: "/shopping-card",
+        },
     ];
 
 

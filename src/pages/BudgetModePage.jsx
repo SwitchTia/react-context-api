@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useBudgetMode } from "../context/BudgetContex";
+import { useBudgetMode } from "../context/BudgetContext";
 import ProductCard from "../components/ProductCard";
+
+
 
 export default function BudgetModePage({ productsList }) {
 
@@ -11,6 +13,7 @@ export default function BudgetModePage({ productsList }) {
     product.price <= 30
   );
 
+  
   const handleTurnOff = () => {
     turnBudgetModeOff();
     navigate("/products");

@@ -1,6 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import LogoImg from "../assets/img/LogoImg.png"
-import { useBudgetMode } from "../context/BudgetContex";
+import { useBudgetMode } from "../context/BudgetContext";
 
 
 export default function AppHeader() {

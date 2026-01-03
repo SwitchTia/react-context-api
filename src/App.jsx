@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import DefaultLayout from "./layouts/DefaultLayout";
 
-import { BudgetProvider } from "./context/BudgetContex";
+import { BudgetProvider } from "./context/BudgetContext";
 import { FavouriteProvider } from "./context/FavouriteContext";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
